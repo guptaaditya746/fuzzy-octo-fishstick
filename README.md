@@ -18,7 +18,19 @@ This repository contains multiple small Airflow projects for learning orchestrat
 8. Add integration tests for DAG parsing and task dependency validation in CI.
 9. Add a simple backfill strategy and documentation for historical reprocessing.
 10. Add one end-to-end DAG combining ingestion + validation + Slack notifications.
+11. Migrate selected tasks to the TaskFlow API to make dependencies and XCom usage cleaner.
+12. Add dataset-based scheduling to show how DAGs can trigger from upstream data updates.
+13. Use dynamic task mapping for batch ingestion or validation across multiple files or tables.
+14. Add custom Airflow Variables and Params so DAG runs can be configured without code changes.
+15. Configure task pools and priority weights to control concurrency under load.
+16. Add a deferrable sensor example to reduce worker usage for long waits.
+17. Add lineage or metadata tracking for ingestion jobs to improve observability.
+18. Add a reusable failure callback that sends Slack alerts with DAG ID, task ID, run ID, and log link.
+19. Add local development tooling with `docker-compose` or Astro for reproducible Airflow setup.
+20. Add example production documentation covering deployment, secrets handling, logging, and monitoring.
 
 ## Suggested Order
 
 Start with ideas `2`, `4`, and `8` first. They provide the biggest improvement in reliability and maintainability with low implementation risk.
+
+After that, ideas `11`, `13`, `15`, and `18` are strong next upgrades because they improve modern Airflow usage, scalability, and operational visibility.
